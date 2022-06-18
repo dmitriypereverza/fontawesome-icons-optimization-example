@@ -1,0 +1,70 @@
+.justui_icon.svg-inline--fa {
+  width: 1rem;
+  height: 1rem;
+
+  &.fa-xs {
+    width: 0.5rem;
+    height: 0.5rem;
+  }
+
+  &.fa-sm {
+    width: 0.75rem;
+    height: 0.75rem;
+  }
+
+  &.fa-lg {
+    width: 1.5rem;
+    height: 1.5rem;
+    .input-group.input-group-lg &, .ReactSelect.lg &, .btn & {
+      width: 1.25rem;
+      height: 1.25rem;
+    }
+  }
+
+  &.fa-xl {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  &.fa-1x {
+    font-size: 1em;
+  }
+
+  &.fa-xxl {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  @for $multiplier from 1 through 10 {
+    &.fa-#{$multiplier}x {
+      width: #{$multiplier}rem;
+      height: #{$multiplier}rem;
+      font-size: #{$multiplier}rem;
+    }
+  }
+
+  .form-control-label & {
+    margin-left: 10px;
+  }
+
+  &:not(.btn-color) {
+    &.fa-color-primary {
+      color: var(--primary);
+    }
+    &.fa-color-info {
+      color: var(--info);
+    }
+    &.fa-color-secondary {
+      color: var(--secondary);
+    }
+    &.fa-color-success {
+      color: var(--success);
+    }
+    &.fa-color-warning {
+      color: var(--warning);
+    }
+    &.fa-color-danger {
+      color: var(--danger);
+    }
+  }
+}
